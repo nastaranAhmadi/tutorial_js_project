@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>responsive clock</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="clock">
+        <meta name="keywords" content="clock, chronometer, timer">
+        <meta name="author" content="Nastaran Ahmadi">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/clock.css">
+    </head>
+    <body>
+        <div id="mainWrapper" class="mainWrapper">
+            <div class="settingContainer" id="settingContainer">
+                <!--input type can be replaced with text without any side effects-->
+                <input id="timerInput" class="timerInput" type="number" placeholder="enter your desired time in seconds">
+                <!--input type can be replaced with text without any side effects-->
+                <input id="timerSubmit" class="timerSubmit" type="submit" value="start">
+            </div>
+            <div class="clockWrapper">
+                <div class="outerCircle" id="outerCircle">
+                    <div class="innerCircle" id="innerCircle">
+                        <p id="desiredTime">0</p>
+                    </div>
+                </div>
+                <p id="countingMessage" style="text-align: center; padding-top: 20px;"></p>
+            </div>
+        </div>
+        <script src="./scripts/clock.js"></script>
+    </body>
+</html>
