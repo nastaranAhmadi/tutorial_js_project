@@ -1,0 +1,81 @@
+.videoContainer {
+    width: 400px; 
+    margin: 0 auto; 
+    position: relative;
+}
+#videoTag {
+    width: 100%;
+}
+.controls {
+    position: absolute;
+    bottom: 5px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    transition: ease-in-out .1s;
+}
+.videoContainer:hover .controls {
+    display: flex;
+}
+.controls:hover {
+    cursor: pointer;
+}
+.controls i {
+    padding: 0 8px;
+}
+.fa-play {
+    font-size: 12px;
+}
+.rightControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rightControls > div {
+    margin-left: 10px;
+}
+#progressInput {
+    position: absolute;
+    width: 400px;
+    bottom: 4px;
+    z-index: 1;
+    margin: 0;
+    transition: ease-in-out .1s;
+}
+.videoContainer:hover #progressInput {
+    bottom: 45px;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    outline: none;
+    overflow: hidden;
+    width: 200px;
+    height: 3px;
+    background: linear-gradient( 90deg, #5fafff 0%, #e1e1e1 0%);
+    transition: ease-in-out .1s;
+}
+input[type="range"]:hover {
+    cursor: pointer;
+}
+.toolbar:hover input[type="range"] {
+    height: 5px;
+}
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: linear-gradient( 90deg, #5fafff 100%, #e1e1e1 0%);
+    box-shadow: -500px 0 0 500px #5fafff;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    background: linear-gradient( 90deg, #5fafff 100%, #e1e1e1 0%);
+    /* border-right: 6px solid #5fafff; */
+    box-shadow: -500px 0 0 500px #5fafff;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>custom video player</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="custom player">
+        <meta name="keywords" content="custom player, video player, js, es6, es7, es8">
+        <meta name="author" content="Nastaran Ahmadi">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/customPlayer.css">
+        <link rel="stylesheet" href="./styles/fontAwsome/all.css">
+    </head>
+    <body>
+        <div class="videoContainer">
+            <video id="videoTag" src="./media/rabitInJungle.mp4"></video>
+            <div class="toolbar">
+                <div class="progressbar">
+                    <input type="range" min="1" max="100" step="1" value="0" id="progressInput">
+                </div>
+                <div class="controls">
+                    <div class="rightControls">
+                        <i class="fas fa-play"></i>
+                        <i class="fas fa-pause" style="display: none;"></i>
+                        <div>
+                            <span id="currentTime">00:00</span>
+                            <span> / </span>
+                            <span id="videoTime">00:00</span></div>
+                    </div>
+                    <div class="leftConrols">
+                        <i class="fas fa-volume-down"></i>
+                        <i class="fas fa-expand"></i>
+                        <i class="fas fa-compress" style="display: none;"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
