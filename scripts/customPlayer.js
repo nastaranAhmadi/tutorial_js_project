@@ -15,12 +15,26 @@ expand.addEventListener('click', ()=> {
     if (!document.fullscreenElement) {
         expand.classList.remove("fa-expand");
         expand.classList.add("fa-compress");
-        videoContainer.requestFullscreen();
+        if(videoContainer.requestFullscreen) {
+            videoContainer.requestFullscreen();
+        } else if(videoContainer.mozFullScreenElement) {
+            videoContainer.mozFullScreenElement()
+        } else if(videoContainer.msFullscreenElement) {
+            videoContainer.msFullscreenElement()
+        } else if(videoContainer.webkitFullscreenElement) {
+            videoContainer.webkitFullscreenElement()
+        }
     } else {
         expand.classList.remove("fa-compress");
         expand.classList.add("fa-expand");
         if (document.exitFullscreen) {
-            document.exitFullscreen();
+            document.exitFullscreen(); 
+        } else if(document.mozCancelFullscreen) {
+            document.mozCancelFullscreen(); 
+        } else if(document.msCancelFullscreen) {
+            document.msCancelFullscreen(); 
+        } else if(document.webkitCancelFullscreen) {
+            document.webkitCancelFullscreen(); 
         }
     }
 })
