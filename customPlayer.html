@@ -7,8 +7,8 @@
         <meta name="keywords" content="custom player, video player, js, es6, es7, es8">
         <meta name="author" content="Nastaran Ahmadi">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/customPlayer.css">
         <link rel="stylesheet" href="./styles/fontAwsome/all.css">
+        <link rel="stylesheet" href="./styles/customPlayer.css">
     </head>
     <body>
         <div class="videoContainer">
@@ -19,21 +19,26 @@
                 </div>
                 <div class="controls">
                     <div class="rightControls">
-                        <i class="fas fa-play"></i>
-                        <i class="fas fa-pause" style="display: none;"></i>
+                        <i class="fas fa-play" id="play"></i>
+                        <i class="fas fa-undo" id="rwd"></i>
+                        <i class="fas fa-redo" id="fwd"></i>
                         <div>
                             <span id="currentTime">00:00</span>
                             <span> / </span>
-                            <span id="videoTime">00:00</span></div>
+                            <span id="videoTime">00:00</span>
+                        </div>
+                        <span id="speedSet" style="padding-left: 15px; font-size: 12px;">1x</span>
                     </div>
                     <div class="leftConrols">
-                        <i class="fas fa-volume-down"></i>
-                        <i class="fas fa-expand"></i>
-                        <i class="fas fa-compress" style="display: none;"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                        <i class="fas fa-volume-up" id="volume"></i>
+                        <i class="fas fa-expand" id="expand"></i>
+                        <i class="fas fa-compress" id="compress" style="display: none;"></i>
+                        <!--Download Attribute works in server fine-->
+                        <a href="./media/rabitInJungle.mp4" download target="_blank"><i class="fas fa-download" id="download"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="./scripts/customPlayer.js"></script>
     </body>
 </html>

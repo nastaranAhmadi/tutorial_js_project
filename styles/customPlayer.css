@@ -29,7 +29,7 @@
 .controls i {
     padding: 0 8px;
 }
-.fa-play {
+.fa-play, .fa-pause, .fa-redo, .fa-undo {
     font-size: 12px;
 }
 .rightControls {
@@ -63,9 +63,6 @@ input[type="range"] {
 input[type="range"]:hover {
     cursor: pointer;
 }
-.toolbar:hover input[type="range"] {
-    height: 5px;
-}
 input[type="range"]:hover::-webkit-slider-thumb {
     background: linear-gradient( 90deg, #5fafff 100%, #e1e1e1 0%);
     box-shadow: -500px 0 0 500px #5fafff;
@@ -76,6 +73,8 @@ input[type="range"]::-webkit-slider-thumb {
     width: 0px;
     height: 0px;
     background: linear-gradient( 90deg, #5fafff 100%, #e1e1e1 0%);
-    /* border-right: 6px solid #5fafff; */
     box-shadow: -500px 0 0 500px #5fafff;
+}
+a, a:visited, a:hover, a:link {
+    color: #fff;
 }
