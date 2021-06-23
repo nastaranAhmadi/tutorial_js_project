@@ -229,7 +229,7 @@ window.addEventListener('resize', function(e){
 //start animation
 function goMovie(){
     initCanvas();
-    initdots(30);
+    initdots(40);
     window.requestAnimationFrame(render);
 }
 goMovie();
